@@ -29,6 +29,22 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: "" # empty string means "all files in the project"
+    values:
+      layout: "default"
+  - scope:
+      path: "_projects" # specifically for your obsidian notes
+    values:
+      layout: "project-style" # if you make a special layout for projects
+
+
 # Build settings
 theme: minima
 plugins:
