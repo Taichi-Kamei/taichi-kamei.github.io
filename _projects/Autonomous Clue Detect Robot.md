@@ -1,5 +1,12 @@
+---
+layout: projects
+title: Autonomous Clue Detect Robot
+---
+
 
 Maybe a video clip of successful run
+
+![alt text](/assets/images/clue_detect_robot/Competition_env.png)
 
 # Objectives
 

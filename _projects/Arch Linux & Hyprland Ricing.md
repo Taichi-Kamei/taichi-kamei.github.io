@@ -1,5 +1,6 @@
 ---
 layout: projects
+title: Arch Linux & Hyprland Ricing
 ---
 
 # Current Hyprland Rice

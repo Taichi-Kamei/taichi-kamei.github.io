@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="project">
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}
+      <time class="project-date" datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+    {% endif %}
+  </header>
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  <footer class="project-footer">
+    <a href="/projects/" class="back-link">← Back to Projects</a>
+  </footer>
+</article>

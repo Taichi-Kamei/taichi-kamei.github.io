@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="home">
+  <!-- About Section -->
+  <section id="about" class="home-section">
+    <h2>About</h2>
+    <div class="section-content">
+      {% if page.about %}
+        {{ page.about | markdownify }}
+      {% else %}
+        <p>Welcome to my portfolio. Tell your story here.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="home-section">
+    <h2>Projects</h2>
+    <ul class="project-list">
+      {% for project in site.projects %}
+        <li class="project-item">
+          <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+          {% if project.excerpt %}
+            <p class="excerpt">{{ project.excerpt }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="home-section">
+    <h2>Contact</h2>
+    <div class="section-content">
+      {% if page.contact %}
+        {{ page.contact | markdownify }}
+      {% else %}
+        <p>Get in touch with me:</p>
+        <ul>
+          {% if site.email %}<li><a href="mailto:{{ site.email }}">Email</a></li>{% endif %}
+          {% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>{% endif %}
+          {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>{% endif %}
+        </ul>
+      {% endif %}
+    </div>
+  </section>
+</div>

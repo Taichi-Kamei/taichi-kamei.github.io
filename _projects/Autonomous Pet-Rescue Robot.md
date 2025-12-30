@@ -1,3 +1,8 @@
+---
+layout: projects
+title: Autonomous Pet-Rescue Robot
+---
+
 
 # Objectives
 
