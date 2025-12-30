@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: projects
 ---
-
 
 # Current Hyprland Rice
 

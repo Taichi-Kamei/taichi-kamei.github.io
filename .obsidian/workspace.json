@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_projects/Arch Linux & Hyprland Ricing.md",
+                "file": "_projects/Sound & Zoom Control Left-Hand Device.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arch Linux & Hyprland Ricing"
+              "title": "Sound & Zoom Control Left-Hand Device"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "3252efa186fb175d",
   "lastOpenFiles": [
+    "_projects/Autonomous Pet-Rescue Robot.md",
     "_projects/Autonomous Clue Detect Robot.md",
-    "_projects/Arch Linux & Hyprland Ricing.md",
-    "_projects/Autonomous Pet-Rescue Robot.md"
+    "_projects/Arch Linux & Hyprland Ricing.md"
   ]
 }
