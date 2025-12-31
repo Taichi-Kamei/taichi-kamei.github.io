@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_projects/Sound & Zoom Control Left-Hand Device.md",
+                "file": "_projects/Autonomous Pet-Rescue Robot.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sound & Zoom Control Left-Hand Device"
+              "title": "Autonomous Pet-Rescue Robot"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 210.5
   },
   "right": {
     "id": "d2b8832183e6a6e7",
@@ -185,31 +185,37 @@
   },
   "active": "3252efa186fb175d",
   "lastOpenFiles": [
-    "_site/assets/images/pfp Background Removed.png",
-    "assets/images/pfp Background Removed.png",
-    "_site/assets/images/pfp.jpg",
-    "assets/images/pfp.jpg",
-    "_site/assets/images/IMG_0258.jpg",
-    "assets/images/IMG_0258.jpg",
-    "_layouts/projects-index.html",
-    "_site/projects/index.html",
-    "projects.markdown",
-    "_site/projects/autonomous-pet-rescue-robot/index.html",
-    "_site/projects/autonomous-pet-rescue-robot",
-    "_site/projects/autonomous-clue-detect-robot/index.html",
-    "_site/projects/autonomous-clue-detect-robot",
-    "_site/projects/sound-zoom-control-left-hand-device/index.html",
-    "_site/projects/sound-zoom-control-left-hand-device",
-    "_layouts/projects.html",
-    "_site/projects/Sound & Zoom Control Left-Hand Device.md",
-    "_site/projects/Autonomous Pet-Rescue Robot.md",
-    "_site/projects/Autonomous Clue Detect Robot.md",
-    "_site/assets/images/clue_detect_robot/Competition_env.png",
-    "assets/images/clue_detect_robot/Competition_env.png",
-    "assets/clue_detect_robot/Competition_env.png",
-    "assets/Competition_env.png",
+    "_site/assets/images/pet_rescue_robot/brainstorming/chassis_layout_sketch.jpg",
+    "assets/images/pet_rescue_robot/brainstorming/chassis_layout_sketch.jpg",
+    "_site/assets/images/pet_rescue_robot/chassis_layout_sketch.jpg",
+    "assets/images/pet_rescue_robot/chassis_layout_sketch.jpg",
+    "assets/images/ar.md",
+    "_site/assets/images/ar.md",
     "_projects/Autonomous Pet-Rescue Robot.md",
     "_projects/Autonomous Clue Detect Robot.md",
-    "_projects/Arch Linux & Hyprland Ricing.md"
+    "assets.md",
+    "_site/assets.md",
+    "_site/assets/images/pet_rescue_robot/arm_base/sandwich_better.jpg",
+    "assets/images/pet_rescue_robot/arm_base/sandwich_better.jpg",
+    "_site/assets/images/pet_rescue_robot/arm_base/magnet_mount.jpg",
+    "assets/images/pet_rescue_robot/arm_base/magnet_mount.jpg",
+    "_site/assets/images/pet_rescue_robot/arm_base/lazy_suzan.jpg",
+    "assets/images/pet_rescue_robot/arm_base/lazy_suzan.jpg",
+    "_site/assets/images/pet_rescue_robot/arm_base/bottom_casing.jpg",
+    "_site/assets/images/pet_rescue_robot/arm_base",
+    "assets/images/pet_rescue_robot/arm_base",
+    "assets/images/pet_rescue_robot/untitled folder",
+    "_site/assets/images/pet_rescue_robot/arm",
+    "assets/images/pet_rescue_robot/arm",
+    "_site/assets/images/pet_rescue_robot/brainstorming",
+    "assets/images/pet_rescue_robot/brainstorming",
+    "_site/assets/images/arch_hyprland",
+    "_site/assets/images/clue_detect_robot/ROS_Structure.pdf",
+    "_site/assets/images/clue_detect_robot/ROS.pdf",
+    "_projects/Sound & Zoom Control Left-Hand Device.md",
+    "_projects/Arch Linux & Hyprland Ricing.md",
+    "_site/projects/Sound & Zoom Control Left-Hand Device.md",
+    "_site/projects/Autonomous Pet-Rescue Robot.md",
+    "_site/projects/Autonomous Clue Detect Robot.md"
   ]
 }

@@ -3,6 +3,11 @@ layout: projects
 title: Autonomous Pet-Rescue Robot
 ---
 
+![alt text](/assets/images/pet_rescue_robot/comp_init.jpg)
+
+* TOC
+{:toc}
+
 
 # Objectives
 
@@ -12,9 +17,23 @@ title: Autonomous Pet-Rescue Robot
 
 # Brainstorming
 
+
+![alt text](/assets/images/pet_rescue_robot/brainstorming/hebb6_discussing.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/brainstorming/arm_base_discuss.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/brainstorming/bucket_discuss.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/brainstorming/detect_cv_height.jpg)
+
 # Initial Design
 
-# My Major Contributions
+![alt text](/assets/images/pet_rescue_robot/brainstorming/chassis_layout_sketch.jpg)
+
+
+![alt text](/assets/images/pet_rescue_robot/brainstorming/arm_clean_sketch.jpg)
+
+# Major Contributions
 
 ## Arm / Arm Base Design
 
@@ -32,6 +51,7 @@ title: Autonomous Pet-Rescue Robot
 - Solution
 
 - Gif of arm movement or maybe youtube clip
+
 ## LiDAR Detection Algorithm
 
 - VL5C5CX 2D Lidar
@@ -95,6 +115,8 @@ title: Autonomous Pet-Rescue Robot
 
 
 # Competition Result and Reflections
+
+![alt text](/assets/images/pet_rescue_robot/group_pic.jpg)
 
 - Unexpected things happen during integration
 	- Thus each component has to be fabricated as quick as possible so we'll have time for integrating + debugging

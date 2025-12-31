@@ -3,6 +3,9 @@ layout: projects
 title: Arch Linux & Hyprland Ricing
 ---
 
+* TOC
+{:toc}
+
 # Current Hyprland Rice
 
 Images

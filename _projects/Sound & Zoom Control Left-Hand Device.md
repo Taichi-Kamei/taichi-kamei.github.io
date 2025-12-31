@@ -3,6 +3,8 @@ layout: projects
 title: Sound & Zoom Control Left-Hand Device
 ---
 
+* TOC
+{:toc}
 
 # Objective
 

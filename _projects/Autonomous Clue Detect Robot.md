@@ -3,6 +3,8 @@ layout: projects
 title: Autonomous Clue Detect Robot
 ---
 
+* TOC
+{:toc}
 
 Maybe a video clip of successful run
 
