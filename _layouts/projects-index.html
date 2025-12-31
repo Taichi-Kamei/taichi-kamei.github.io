@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="projects-page">
+  <h1>{{ page.title }}</h1>
+  
+  <div class="projects-intro">
+    {{ content }}
+  </div>
+
+  <div class="projects-grid">
+    {% for project in site.projects %}
+      <article class="project-card">
+        {% if project.image %}
+          <div class="project-image">
+            <img src="{{ project.image }}" alt="{{ project.title }}">
+          </div>
+        {% endif %}
+        <div class="project-content">
+          <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+          {% if project.excerpt %}
+            <p class="project-excerpt">{{ project.excerpt }}</p>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>
