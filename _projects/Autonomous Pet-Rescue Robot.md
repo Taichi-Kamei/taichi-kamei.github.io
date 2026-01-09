@@ -12,11 +12,12 @@ title: Autonomous Pet-Rescue Robot
 # Objectives
 
 - Pet-rescue
+
+![alt text](/assets/images/pet_rescue_robot/plz_siblings.jpg)
 - Competition rules
 - Limitations: height, width
 
 # Brainstorming
-
 
 ![alt text](/assets/images/pet_rescue_robot/brainstorming/hebb6_discussing.jpg)
 
@@ -26,22 +27,40 @@ title: Autonomous Pet-Rescue Robot
 
 ![alt text](/assets/images/pet_rescue_robot/brainstorming/detect_cv_height.jpg)
 
-# Initial Design
-
-![alt text](/assets/images/pet_rescue_robot/brainstorming/chassis_layout_sketch.jpg)
-
-
-![alt text](/assets/images/pet_rescue_robot/brainstorming/arm_clean_sketch.jpg)
 
 # Major Contributions
 
 ## Arm / Arm Base Design
+
+
+![alt text](/assets/images/pet_rescue_robot/brainstorming/arm_clean_sketch.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/arm/inital_cad.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/arm/init_arm_base_print.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/arm/arm_shaft.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/arm/early_arm_assembly.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/arm/early_arm_with_plz.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/arm/arm_base_close_up.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/arm/arm_fox_max.jpg)
 
 - desmos
 - referenced arm
 - cad
 - midway arm
 - final arm
+
+![alt text](/assets/images/pet_rescue_robot/arm_base/sandwich_better.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/arm_base/lazy_suzan.jpg)
+
+
+
 
 - Sandwiching with Delrin and PMMA
 - Use brushed DC motor and magnetic encoder PID for rotation
@@ -54,6 +73,8 @@ title: Autonomous Pet-Rescue Robot
 
 ## LiDAR Detection Algorithm
 
+![alt text](/assets/images/pet_rescue_robot/lidar_detect_proto.PNG)
+
 - VL5C5CX 2D Lidar
 - General Algorithm
 - Development on Rpi and Python
@@ -62,11 +83,25 @@ title: Autonomous Pet-Rescue Robot
 
 ## I2C multiplexer & I2C Buffer Custom PCB
 
+![alt text](/assets/images/pet_rescue_robot/i2c_mux_pcb/mux_schematics.png)
+
+![alt text](/assets/images/pet_rescue_robot/i2c_mux_pcb/mux_img.png)
+
+![alt text](/assets/images/pet_rescue_robot/i2c_mux_pcb/mux_3d.png)
+
+![alt text](/assets/images/pet_rescue_robot/i2c_mux_pcb/i2c_pcb.jpg)
+
 - Why we needed multiplexer and buffer
 - Kicad design
 - Some issues with the wiring
 
 ## Circuitry Casing 
+
+![alt text](/assets/images/pet_rescue_robot/arm_base/magnet_mount.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/arm_base/bottom_casing.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/encoder_placement.jpg)
 
 - Magnetic Encoder mount
 - Buck Converter 
@@ -88,19 +123,33 @@ title: Autonomous Pet-Rescue Robot
 
 ## Chassis Layout
 
+![alt text](/assets/images/pet_rescue_robot/chassis/chassis_layout_sketch.jpg)
+
+![alt text](/assets/images/pet_rescue_robot/chassis/chassis_layout.PNG)
+
 ## Basket Lifting / Deploying Mechanism
 
-## H-Bridge Custom PCB
+## Other Custom PCBs and Mother Board
 
-## Magnetic Encoder Custom PCB
+![alt text](/assets/images/pet_rescue_robot/other_pcbs/h_bridge_3d.png)
 
-## Mother Board
+![alt text](/assets/images/pet_rescue_robot/other_pcbs/encoder_3d.png)
+
+![alt text](/assets/images/pet_rescue_robot/other_pcbs/reflectance_3d.png)
+
+![alt text](/assets/images/pet_rescue_robot/other_pcbs/mother_schematics.png)
+
+- H bridge
+- magnetic encoder
+- IR sensor
+
+![alt text](/assets/images/pet_rescue_robot/mother.jpg)
 
 ## Software
+Developed on ESP32 Pico in C++ with the use of FreeRTOS.
 
-### Finite State Machine
-
-### Arm inverse Kinematics
+Finite State Machine
+Arm inverse Kinematics
 
 
 # Struggles During Integration
@@ -113,6 +162,8 @@ title: Autonomous Pet-Rescue Robot
 
 # Final Robot Design
 
+
+![alt text](/assets/images/pet_rescue_robot/final_robot_prolly.jpg)
 
 # Competition Result and Reflections
 
