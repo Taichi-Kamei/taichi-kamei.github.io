@@ -197,7 +197,8 @@ a:hover {
   max-width: 40%;
   max-height: 40%;
   /* height: auto; */
-  margin: 1.5rem 0;
+  display: block;
+  margin: 1.5rem auto;
   border-radius: 4px;
 }
 

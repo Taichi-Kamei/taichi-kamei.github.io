@@ -19,13 +19,15 @@ title: Autonomous Pet-Rescue Robot
 
 # Brainstorming
 
-![alt text](/assets/images/pet_rescue_robot/brainstorming/hebb6_discussing.jpg)
-
-![alt text](/assets/images/pet_rescue_robot/brainstorming/arm_base_discuss.jpg)
+<div style="display: flex; gap: 1px; justify-content: center;">
+<img src="/assets/images/pet_rescue_robot/brainstorming/hebb6_discussing.jpg" alt="alt text" style="max-width: 35%; height: auto;">
+<img src="/assets/images/pet_rescue_robot/brainstorming/arm_base_discuss.jpg" alt="alt text" style="max-width: 35%; height: auto;">
+</div>
 
 ![alt text](/assets/images/pet_rescue_robot/brainstorming/bucket_discuss.jpg)
 
 ![alt text](/assets/images/pet_rescue_robot/brainstorming/detect_cv_height.jpg)
+
 
 
 # Major Contributions
@@ -123,27 +125,29 @@ title: Autonomous Pet-Rescue Robot
 
 ## Chassis Layout
 
-![alt text](/assets/images/pet_rescue_robot/chassis/chassis_layout_sketch.jpg)
-
-![alt text](/assets/images/pet_rescue_robot/chassis/chassis_layout.PNG)
+<div style="display: flex; gap: 1px; justify-content: center;">
+<img src="/assets/images/pet_rescue_robot/chassis/chassis_layout_sketch.jpg" alt="alt text" style="max-width: 45%; height: auto;">
+<img src="/assets/images/pet_rescue_robot/chassis/chassis_layout.PNG" alt="alt text" style="max-width: 45%; height: auto;">
+</div>
 
 ## Basket Lifting / Deploying Mechanism
 
 ## Other Custom PCBs and Mother Board
 
-![alt text](/assets/images/pet_rescue_robot/other_pcbs/h_bridge_3d.png)
-
-![alt text](/assets/images/pet_rescue_robot/other_pcbs/encoder_3d.png)
-
-![alt text](/assets/images/pet_rescue_robot/other_pcbs/reflectance_3d.png)
-
-![alt text](/assets/images/pet_rescue_robot/other_pcbs/mother_schematics.png)
+<div style="display: flex; gap: 1px; justify-content: center;">
+<img src="/assets/images/pet_rescue_robot/other_pcbs/h_bridge_3d.png" alt="alt text" style="max-width: 25%; height: auto;">
+<img src="/assets/images/pet_rescue_robot/other_pcbs/encoder_3d.png" alt="alt text" style="max-width: 25%; height: auto;">
+<img src="/assets/images/pet_rescue_robot/other_pcbs/reflectance_3d.png" alt="alt text" style="max-width: 25%; height: auto;">
+</div>
 
 - H bridge
 - magnetic encoder
 - IR sensor
 
-![alt text](/assets/images/pet_rescue_robot/mother.jpg)
+<div style="display: flex; gap: 1px; justify-content: center;">
+<img src="/assets/images/pet_rescue_robot/other_pcbs/mother_schematics.png" alt="alt text" style="max-width: 35%; height: auto;">
+<img src="/assets/images/pet_rescue_robot/mother.jpg" alt="alt text" style="max-width: 35%; height: auto;">
+</div>
 
 ## Software
 Developed on ESP32 Pico in C++ with the use of FreeRTOS.
