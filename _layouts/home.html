@@ -10,7 +10,10 @@ layout: default
       {% if page.about %}
         {{ page.about | markdownify }}
       {% else %}
-        <p>Welcome to my portfolio. Tell your story here.</p>
+        <div class="profile-pic-container">
+          <img src="/assets/images/pfp.jpg" alt="Profile Picture" class="profile-pic">
+        </div>
+        <p>Hi, My name is Taichi Kamei. I am a 3rd year Engineering Physics student at UBC who enjoys designing, fabricating mechanical and electrical components, and integrating them. I am interested in mechatronics, and embedded systems.</p>
       {% endif %}
     </div>
   </section>
