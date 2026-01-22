@@ -43,6 +43,7 @@ a:hover {
 }
 
 .nav-brand {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -84,14 +85,14 @@ a:hover {
   font-family: 'Times New Roman', Times, serif;
   font-size: 3.5rem;
   font-weight: bold;
-  margin-top: 30vh;
+  margin-top: 40vh;
   padding: 0 1.5rem 2rem;
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
 }
 
 .sidebar-links {
   list-style: none;
-  padding: 0;
+  padding: 3rem 20px;
 }
 
 .sidebar-links li {
@@ -116,8 +117,8 @@ a:hover {
 .main-content {
   flex: 1;
   width: 100%;
-  padding: 5rem 1rem 2rem;
-  max-width: 900px;
+  padding: 1rem 1rem 2rem;
+  max-width: 70vw;
   margin: 0 auto;
 }
 
@@ -236,8 +237,51 @@ a:hover {
     padding: 2rem;
   }
 
+  .social-island {
+    margin-left: 500px;
+
+  }
+
   .container {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    /* Column 1: Sidebar (280px) */
+    /* Column 2: Main Content (Flexible) */
+    /* Column 3: Social Island (80px) */
+    grid-template-columns: 300px 1fr 80px; 
+    gap: 20px;
+    align-items:start;
+  }
+
+  .nav-header {
+    display: none;
+  }
+
+  .nav-sidebar {
+    display: flex;
+    position: sticky; /* Better than fixed: stays in its grid column */
+    top: 0;
+  }
+
+  .main-content {
+    margin: 0 auto; /* Centers the content within its middle column */
+    max-width: 800px;
+    padding: 3rem 2rem;
+    width: 100%;
+  }
+
+  .social-island {
+    position: sticky; /* Stays visible as you scroll */
+    top: 90vh;      
+    align-self: start; 
+
+    display: flex;
+    padding-right: 20px;
   }
 }
 
@@ -458,6 +502,60 @@ a:hover {
   margin: 0;
   line-height: 1.5;
   flex-grow: 1;
+}
+
+/* Social Media Island */
+.social-island {
+  position: fixed;
+  bottom: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 999;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid #5B8FA3;
+  color: #5B8FA3;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon:hover {
+  background: #5B8FA3;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(91, 143, 163, 0.3);
+}
+
+.social-icon.github:hover {
+  background: #333;
+  border-color: #333;
+}
+
+.social-icon.linkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+}
+
+/* Hide social island on mobile */
+@media (max-width: 768px) {
+  .social-island {
+    display: none;
+  }
 }
 
 #markdown-toc ul {
