@@ -85,7 +85,7 @@ a:hover {
   font-family: 'Times New Roman', Times, serif;
   font-size: 3.5rem;
   font-weight: bold;
-  margin-top: 40vh;
+  margin-top: 30vh;
   padding: 0 1.5rem 0;
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
 }
@@ -99,7 +99,7 @@ a:hover {
 
 .sidebar-links {
   list-style: none;
-  padding: 3rem 20px;
+  padding: 3rem 2px;
 }
 
 .sidebar-links li {

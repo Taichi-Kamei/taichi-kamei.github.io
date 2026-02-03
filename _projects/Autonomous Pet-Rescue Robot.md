@@ -12,11 +12,15 @@ featured: true
 
 # Objectives
 
-- Pet-rescue
 
 ![alt text](/assets/images/pet_rescue_robot/plz_siblings.jpg)
-- Competition rules
-- Limitations: height, width
+
+![alt text](/assets/images/pet_rescue_robot/Competition%20Environment%20CAD.png)
+
+The competition theme was "Pet Rescue"
+The goal of the competition was to then navigate a non-cyclic course, by guide of black tape, and retrieve 'animal plushies' along the track, to ultimately return them to a safe zone at the start of the course. Various complications were involved including obstructed pets, unguided and rough track sections, and size/budget limitations.
+
+*The CAD file does not include the black line and debris section before the zip-line.
 
 # Brainstorming
 
@@ -30,11 +34,9 @@ featured: true
 ![alt text](/assets/images/pet_rescue_robot/brainstorming/detect_cv_height.jpg)
 
 
-
 # Major Contributions
 
 ## Arm / Arm Base Design
-
 
 ![alt text](/assets/images/pet_rescue_robot/brainstorming/arm_clean_sketch.jpg)
 
@@ -51,12 +53,6 @@ featured: true
 ![alt text](/assets/images/pet_rescue_robot/arm/arm_base_close_up.jpg)
 
 ![alt text](/assets/images/pet_rescue_robot/arm/arm_fox_max.jpg)
-
-- desmos
-- referenced arm
-- cad
-- midway arm
-- final arm
 
 ![alt text](/assets/images/pet_rescue_robot/arm_base/sandwich_better.jpg)
 
@@ -78,11 +74,14 @@ featured: true
 
 ![alt text](/assets/images/pet_rescue_robot/lidar_detect_proto.PNG)
 
+Prototyped a payload detection algorithm in Python on Raspberry Pi using two VL5C5CX 2D Lidar, generating depth and reflectance map in 7Hz. Implemented it in C++ on ESP32 with 15 Hz real-time detection.
+
+The algorithm was to detect a cylindrical shape in front of the sensors.
+
 - VL5C5CX 2D Lidar
 - General Algorithm
 - Development on Rpi and Python
 - Implementation in cpp with ESP
-- FreeRTOS and ran on different core
 
 ## I2C multiplexer & I2C Buffer Custom PCB
 
@@ -94,9 +93,10 @@ featured: true
 
 ![alt text](/assets/images/pet_rescue_robot/i2c_mux_pcb/i2c_pcb.jpg)
 
-- Why we needed multiplexer and buffer
-- Kicad design
-- Some issues with the wiring
+- Designed custom 2-layer I2C multiplexer and I2C buffer PCB on KiCAD to solve peripheral address
+conflicts and signal degradation
+
+The initial PCB had a minor wiring issue, and I debugged using oscilloscope and DMM, narrowed down the issue, modified the wiring, and soldered a functioning PCB.
 
 ## Circuitry Casing 
 

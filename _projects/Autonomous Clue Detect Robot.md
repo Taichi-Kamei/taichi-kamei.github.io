@@ -1,16 +1,23 @@
 ---
 layout: projects
 title: Autonomous Clue Detect Robot
-featured: false
+featured: true
 ---
 
 * TOC
 {:toc}
 
-Maybe a video clip of successful run
 
 ![alt text](/assets/images/clue_detect_robot/Competition_env.png)
 
+
+<object data="{{ site.baseurl }}/assets/images/clue_detect_robot/ENPH353_Final_Report.pdf" type="application/pdf" width="100%" height="800px">
+    <embed src="{{ site.baseurl }}/assets/images/clue_detect_robot/ENPH353_Final_Report.pdf" type="application/pdf" />
+    <p>Your browser does not support embedded PDF files. 
+    <a href="{{ site.baseurl }}/assets/images/clue_detect_robot/ENPH353_Final_Report.pdf">Click here to download the report.</a></p>
+</object>
+
+<!-- 
 # Objectives
 
 
@@ -38,6 +45,6 @@ Maybe a video clip of successful run
 # Competition Result
 
 
-# Further Improvements
+# Further Improvements -->
 
 
