@@ -1,6 +1,7 @@
 ---
 layout: projects
 title: Autonomous Clue Detect Robot
+featured: false
 ---
 
 * TOC

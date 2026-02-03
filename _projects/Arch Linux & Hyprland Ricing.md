@@ -1,6 +1,7 @@
 ---
 layout: projects
 title: Arch Linux & Hyprland Ricing
+featured: false
 ---
 
 * TOC

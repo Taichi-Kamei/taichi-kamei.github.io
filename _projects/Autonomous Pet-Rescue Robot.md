@@ -1,6 +1,7 @@
 ---
 layout: projects
 title: Autonomous Pet-Rescue Robot
+featured: true
 ---
 
 ![alt text](/assets/images/pet_rescue_robot/comp_init.jpg)

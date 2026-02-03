@@ -1,6 +1,7 @@
 ---
 layout: projects
 title: Sound & Zoom Control Left-Hand Device
+featured: false
 ---
 
 * TOC
