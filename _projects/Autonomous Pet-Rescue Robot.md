@@ -4,7 +4,7 @@ title: Autonomous Pet-Rescue Robot
 featured: true
 ---
 
-![alt text](/assets/images/pet_rescue_robot/final_robot_prolly.jpg)
+<img src="/assets/images/pet_rescue_robot/final_robot_prolly.jpg" alt="Final Robot" style="width:50%;">
 
 * TOC
 {:toc}
