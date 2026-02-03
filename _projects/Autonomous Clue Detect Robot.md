@@ -4,11 +4,13 @@ title: Autonomous Clue Detect Robot
 featured: true
 ---
 
+
+![alt text](/assets/images/clue_detect_robot/pre_truck_detection.png)
+
 * TOC
 {:toc}
 
 
-![alt text](/assets/images/clue_detect_robot/Competition_env.png)
 
 
 <object data="{{ site.baseurl }}/assets/images/clue_detect_robot/ENPH353_Final_Report.pdf" type="application/pdf" width="100%" height="800px">
@@ -16,6 +18,7 @@ featured: true
     <p>Your browser does not support embedded PDF files. 
     <a href="{{ site.baseurl }}/assets/images/clue_detect_robot/ENPH353_Final_Report.pdf">Click here to download the report.</a></p>
 </object>
+
 
 <!-- 
 # Objectives
