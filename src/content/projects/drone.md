@@ -24,6 +24,8 @@ coverImage: "/images/drone/GPS+Magnetometer.png"
 
 ## Electrical
 
+![High Level Flight Controller Schematics](/images/drone/high_level_schematics.png)
+![BMS schematics](/images/drone/BMS.png)
 ![GPS & Magnetometer Schematics](/images/drone/GPS+Magnetometer_schematics.png)
 ![4-layer GPS & Magnetometer Module PCB](/images/drone/GPS+Magnetometer.png)
  

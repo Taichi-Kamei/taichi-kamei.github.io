@@ -23,12 +23,8 @@ My dotfile repo is available on <a href="https://github.com/Taichi-Kamei/dotfile
 
 ## Initial Setup
 
-<div class="image-row">
-  <img src="/images/arch_hyprland/early_ricing.jpg" alt="Early rice" />
-  <img src="/images/arch_hyprland/hyprland_init.jpg" alt="Hyprland initial setup" />
-</div>
-
 ![](/images/arch_hyprland/Initial_hyprland.jpeg)
+![](/images/arch_hyprland/early_ricing.jpg)
 
 ![](/images/arch_hyprland/current_ricing.jpg)
 
