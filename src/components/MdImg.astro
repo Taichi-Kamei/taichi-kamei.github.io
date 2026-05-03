@@ -1,0 +1,19 @@
+---
+interface Props {
+  src?: string;
+  alt?: string;
+  [key: string]: unknown;
+}
+
+const { src, alt, ...rest } = Astro.props;
+const showCaption = alt && alt.length <= 60;
+---
+
+{showCaption ? (
+  <figure>
+    <img src={src} alt={alt} {...rest} />
+    <figcaption>{alt}</figcaption>
+  </figure>
+) : (
+  <img src={src} alt={alt} {...rest} />
+)}

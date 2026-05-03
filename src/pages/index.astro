@@ -1,0 +1,251 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const allProjects = await getCollection('projects');
+const featured = allProjects
+  .filter(p => p.data.featured)
+  .sort((a, b) => a.data.priority - b.data.priority);
+const others = allProjects.filter(p => !p.data.featured);
+---
+
+<Layout title="Taichi Kamei" description="Engineering Physics student at UBC.">
+  <Nav />
+
+  <main>
+    <!-- About -->
+    <section class="about">
+      <div class="profile">
+        <img src="/images/pfp.jpg" alt="Taichi Kamei" class="pfp" />
+        <div class="profile-text">
+          <h1>Taichi Kamei</h1>
+          <p class="tagline">3rd Year Engineering Physics · UBC</p>
+          <p class="bio">
+          I have a deep passion in Mechatronics including all of electrical, mechanical, and computer engineering fields.  I am also fond of simple & functional & asthetic designs such as MUJI products.  My hobbies are golfing and ricing my Linux setup.
+          </p>
+          <div class="links">
+            <a href="mailto:t.kamei0716@gmail.com" target="_blank" rel="noopener" class="link-btn">Email</a>
+            <a href="/PDF/Taichi_Kamei_Resume.pdf" target="_blank" rel="noopener" class="link-btn">Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Work Experience -->
+    <section class="section">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="role">Quantum Photonic Researcher Co-op</span>
+            <span class="company">— UBC Quantum Matter Institute</span>
+          </div>
+          <span class="period">May - August 2026</span>
+          <p class="desc"> Will be testing and verifying a low-noise amplifier PCB for the single photon detector RF analysis</p>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="role">B.ASc Engineering Physics</span>
+            <span class="company">— University of British Columbia</span>
+          </div>
+          <span class="period">2023 – Present</span>
+          <p class="desc"> Relevant Courses: Electric Circuit Analysis, Signals and Systems, Digital Systems and Microcomputers, Software Construction, Solid and Fluid Mechanics, Mechanical Designs, Thermodynamics, Statistical Mechanics, Quantum Mechanics</p>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Projects -->
+    <section class="section projects-section">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="grid">
+        {featured.map(p => (
+          <ProjectCard
+            title={p.data.title}
+            description={p.data.description}
+            slug={p.id}
+            tags={p.data.tags}
+            coverImage={p.data.coverImage}
+          />
+        ))}
+      </div>
+
+      <a href="/projects" class="more-link">View More →</a>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 3rem var(--gap) 5rem;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3.5rem 0;
+  }
+
+  /* About */
+  .about { padding-bottom: 0.5rem; }
+
+  .profile {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  .pfp {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: -0.25rem;
+  }
+
+  .bio {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    max-width: 540px;
+    margin-top: 0.25rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .link-btn {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    color: var(--text-muted);
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .link-btn:hover {
+    color: var(--text);
+    border-color: #999;
+  }
+
+  /* Generic section */
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-transform: none;
+    color: var(--text);
+  }
+
+  /* Timeline */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .timeline-meta { font-size: 0.95rem; }
+  .role { font-weight: 600; }
+  .company { color: var(--text-muted); }
+
+  .period {
+    font-size: 0.8rem;
+    color: var(--text-faint);
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 540px;
+    margin-top: 0.15rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  .more-link {
+    font-size: 0.85rem;
+    color: var(--text-faint);
+    text-decoration: none;
+    align-self: center;
+    transition: color 0.15s;
+  }
+
+  .more-link:hover { color: var(--text); }
+
+  .projects-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .projects-section .section-title {
+    align-self: flex-start;
+  }
+
+  @media (max-width: 560px) {
+    .profile { flex-direction: column; gap: 1.25rem; }
+    .pfp { width: 90px; height: 90px; }
+    h1 { font-size: 1.4rem; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>

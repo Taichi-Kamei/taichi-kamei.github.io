@@ -1,0 +1,209 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import TOC from '../../components/TOC.astro';
+import MdImg from '../../components/MdImg.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(p => ({ params: { slug: p.id }, props: { entry: p } }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const { title, description, tags = [] } = entry.data;
+---
+
+<Layout title={title} description={description}>
+  <Nav />
+
+  <div class="page">
+    <aside class="sidebar">
+      <TOC headings={headings} />
+    </aside>
+
+    <article>
+      <header>
+        <a href="/projects" class="back">← Projects</a>
+        <h1>{title}</h1>
+        <p class="desc">{description}</p>
+        {tags.length > 0 && (
+          <ul class="tags">
+            {tags.map(t => <li>{t}</li>)}
+          </ul>
+        )}
+      </header>
+
+      <div class="content">
+        <Content />
+      </div>
+    </article>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    max-width: calc(var(--max-w) + 220px);
+    margin: 0 auto;
+    padding: 3rem var(--gap) 5rem;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: sticky;
+    top: calc(56px + 2rem);
+    max-height: calc(100vh - 56px - 4rem);
+    overflow-y: auto;
+  }
+
+  /* Article header */
+  header {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .back {
+    font-size: 0.82rem;
+    color: var(--text-faint);
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+    display: inline-block;
+  }
+  .back:hover { color: var(--text); }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 580px;
+  }
+
+  .tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+  }
+
+  .tags li {
+    font-size: 0.75rem;
+    color: var(--text-faint);
+    background: var(--bg-subtle);
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  /* Markdown content */
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .content :global(h2) {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-top: 2.5rem;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .content :global(h3) {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .content :global(h4) {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-muted);
+  }
+
+  .content :global(p) {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .content :global(ul), .content :global(ol) {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .content :global(li) { margin-bottom: 0.25rem; }
+
+  .content :global(img) {
+    display: block;
+    margin: 1.25rem auto 0;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    max-width: 100%;
+    max-height: 480px;
+  }
+
+  .content :global(figure) {
+    margin: 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content :global(figure img) {
+    margin: 0;
+  }
+
+  .content :global(figcaption) {
+    font-size: 0.78rem;
+    color: var(--text-faint);
+    margin-top: 0.45rem;
+    text-align: center;
+  }
+
+  .content :global(a) {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* Collapse sidebar on narrow viewports */
+  @media (max-width: 760px) {
+    .page {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .sidebar {
+      position: static;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      background: var(--bg-subtle);
+    }
+  }
+</style>

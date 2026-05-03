@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const allProjects = await getCollection('projects');
+const sorted = allProjects.sort((a, b) => a.data.priority - b.data.priority);
+---
+
+<Layout title="Projects" description="Engineering projects">
+  <Nav />
+
+  <main>
+    <h1>Projects</h1>
+
+    <div class="grid">
+      {sorted.map(p => (
+        <ProjectCard
+          title={p.data.title}
+          description={p.data.description}
+          slug={p.id}
+          tags={p.data.tags}
+          coverImage={p.data.coverImage}
+        />
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 3rem var(--gap) 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+</style>
