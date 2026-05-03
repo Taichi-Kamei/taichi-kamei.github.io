@@ -1,6 +1,6 @@
 ---
 title: "Drone Flight Controller"
-description: "Building drone from a ground up with a team of three. We are at the stage of designing flighter controler PCB are at the stage of designing flighter controler PCB."  
+description: "Building a drone from ground up with a team of three. Currently designing flight controller PCB."  
 featured: true
 priority: 1 
 tags: [PCB Design, C++, Rust, Kalman Filter, RF, UART, SPI, I2C, ESP32]

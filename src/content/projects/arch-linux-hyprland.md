@@ -1,6 +1,6 @@
 ---
 title: "Arch Linux & Hyprland Rice"
-description: "Installed Arch Linux on a refurbished ThinkPad and configured a custom Hyprland Wayland environment. Currently daily drives my Arch Hyprland Laptop."
+description: "My daily driving Arch Linux & Hyprland setup on a refurbished ThinkPad."
 featured: true
 priority: 2
 tags: [Linux, Arch, Hyprland, Wayland, Dotfiles, Nvim]
@@ -13,11 +13,11 @@ coverImage: /images/arch_hyprland/current_ricing.jpg
 The theme for my ricing is **simple and daily driveable**.  
 Most Hyprland setups online are visually astonishing, but I want to keep mine simple so that it doesn't bother myself while working.  
   
-My dotfile repo is available on <a href="https://github.com/Taichi-Kamei/dotfiles" target="_blank" rel="noopener noreferrer">GitHub</a>.
+<a href="https://github.com/Taichi-Kamei/dotfiles" target="_blank" rel="noopener noreferrer">My Dotfile</a>
 ![Waybar, Rofi, nwg-dock](/images/arch_hyprland/current_setup.png)
 ![Logout Screen](/images/arch_hyprland/logout_screen.png)
 ![Typical ricing](/images/arch_hyprland/Ricing_like.png)
-![Nvim with cute cat background](/images/arch_hyprland/nvim_with_cat.png)
+![Nvim with a cute cat background](/images/arch_hyprland/nvim_with_cat.png)
 
 
 
