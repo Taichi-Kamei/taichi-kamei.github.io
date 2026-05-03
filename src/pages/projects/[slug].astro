@@ -176,11 +176,24 @@ const { title, description, tags = [] } = entry.data;
     margin: 0;
   }
 
+  .content :global(figure.side-by-side) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .content :global(figure.side-by-side img) {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
   .content :global(figcaption) {
     font-size: 0.78rem;
     color: var(--text-faint);
     margin-top: 0.45rem;
     text-align: center;
+    width: 100%;
   }
 
   .content :global(a) {

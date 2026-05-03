@@ -4,7 +4,7 @@ description: "My daily driving Arch Linux & Hyprland setup on a refurbished Thin
 featured: true
 priority: 2
 tags: [Linux, Arch, Hyprland, Wayland, Dotfiles, Nvim]
-coverImage: /images/arch_hyprland/current_ricing.jpg
+coverImage: /images/arch_hyprland/Hyprland.jpeg
 ---
 
 
@@ -13,7 +13,7 @@ coverImage: /images/arch_hyprland/current_ricing.jpg
 The theme for my ricing is **simple and daily driveable**.  
 Most Hyprland setups online are visually astonishing, but I want to keep mine simple so that it doesn't bother myself while working.  
   
-<a href="https://github.com/Taichi-Kamei/dotfiles" target="_blank" rel="noopener noreferrer">My Dotfile</a>
+<b><a href="https://github.com/Taichi-Kamei/dotfiles" target="_blank" rel="noopener noreferrer">Dotfile</a></b>
 ![Waybar, Rofi, nwg-dock](/images/arch_hyprland/current_setup.png)
 ![Logout Screen](/images/arch_hyprland/logout_screen.png)
 ![Typical ricing](/images/arch_hyprland/Ricing_like.png)
@@ -23,10 +23,13 @@ Most Hyprland setups online are visually astonishing, but I want to keep mine si
 
 ## Initial Setup
 
-![](/images/arch_hyprland/Initial_hyprland.jpeg)
 ![](/images/arch_hyprland/early_ricing.jpg)
 
-![](/images/arch_hyprland/current_ricing.jpg)
+<figure class="side-by-side">
+  <img src="/images/arch_hyprland/Initial_hyprland.jpeg" alt="Drive steep right">
+  <img src="/images/arch_hyprland/current_ricing.jpg" alt="Drive steep left">
+  <figcaption>Left: First day <br>   Right: A week into ricing</figcaption>
+</figure>
 
 ## Why Arch
 
