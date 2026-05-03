@@ -1,6 +1,6 @@
 ---
-title: Autonomous Clue Detect Robot
-description: Autonomous robot for the ENPH 353 competition — navigated a Gazebo/ROS simulation environment, performed line following with dual-line PID, and read roadside clues using a custom CNN-based OCR pipeline.
+title: "Autonomous Clue Detect Robot"
+description: "Autonomous robot for the ENPH 353 competition — navigated a Gazebo/ROS simulation environment, performed line following with dual-line PID, and read roadside clues using a custom CNN-based OCR pipeline."
 featured: true
 priority: 4 
 tags: [Gazebo, ROS, Python, FSM, OpenCV, OCR CNN, PID]

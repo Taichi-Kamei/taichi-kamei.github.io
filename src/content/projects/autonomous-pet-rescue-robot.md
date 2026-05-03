@@ -1,6 +1,6 @@
 ---
-title: Autonomous Pet-Rescue Robot
-description: Autonomous robot for UBC's Engineering Physics robot competition — navigated a line-following course, retrieved animal plushies using a custom robotic arm with LiDAR detection, and deployed a basket mechanism to deliver them to a safe zone.
+title: "Autonomous Pet-Rescue Robot"
+description: "Autonomous robot for UBC's Engineering Physics robot competition — navigated a line-following course, retrieved animal plushies using a custom robotic arm with LiDAR detection, and deployed a basket mechanism to deliver them to a safe zone."
 featured: true
 priority: 3 
 tags: [ESP32, C++, FreeRTOS, KiCad, LiDAR, PCB Design, CAD]

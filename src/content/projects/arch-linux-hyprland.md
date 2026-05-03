@@ -1,6 +1,6 @@
 ---
-title: Arch Linux & Hyprland Rice
-description: Installed Arch Linux on a refurbished ThinkPad and configured a custom Hyprland Wayland environment. Currently daily drives my Arch Hyprland Laptop.  
+title: "Arch Linux & Hyprland Rice"
+description: "Installed Arch Linux on a refurbished ThinkPad and configured a custom Hyprland Wayland environment. Currently daily drives my Arch Hyprland Laptop."
 featured: true
 priority: 2
 tags: [Linux, Arch, Hyprland, Wayland, Dotfiles, Nvim]
