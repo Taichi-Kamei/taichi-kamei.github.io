@@ -15,20 +15,22 @@ coverImage: "/images/drone/GPS+Magnetometer.png"
 
 ## My Main Tasks
 1. Design a drone flight controller PCB with follwing features:
-    - Battery management system (BMS) with 4S Lipo input
-    - ESP32-S3
-    - RF transceiver
+    - Battery management system (BMS) for 4S Lipo input
+    - ESP32-S3-MINI1U
+    - RF transceiver using SX1261
     - IMU, barometer, magnetometer, GPS module
 2. Implement Kalman filter firmware in Rust
 3. Design and fabricate a drone frame and test rigs
 
-## Electrical
+## Drone Flight Controller PCBs
 
 ![High Level Flight Controller Schematics](/images/drone/high_level_schematics.png)
-![BMS schematics](/images/drone/BMS.png)
+![BMS Schematics](/images/drone/BMS.png)
+![Flight Controller Schematics](/images/drone/FC.png)
+![Sensors Schematics](/images/drone/Sensors.png)
+![RF transceiver Schematics](/images/drone/RF.png)
+
 ![GPS & Magnetometer Schematics](/images/drone/GPS+Magnetometer_schematics.png)
 ![4-layer GPS & Magnetometer Module PCB](/images/drone/GPS+Magnetometer.png)
  
-## Mechanical
 
-## Firmware
