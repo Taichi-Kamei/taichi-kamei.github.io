@@ -55,3 +55,14 @@ Most Hyprland setups online are visually astonishing, but I want to keep mine si
 - **Kitty terminal**: excellent GPU-accelerated terminal, but switched to Alacritty because the icon looked better than Kitty 
 - **Keybindings and tiling**: dramatically more efficient than macOS or Windows window management
 - **Waybar**: painful to configure initially, but I learnt a bit of CSS throughout this experience 
+
+
+## Switching to NixOS
+
+I decided to switch from Arch to NixOS.
+
+![Basic NixOS setups on a virtual machine](/images/arch_hyprland/nixos_vm.png)
+ 
+
+
+
