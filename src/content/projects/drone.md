@@ -31,6 +31,11 @@ coverImage: "/images/drone/GPS+Magnetometer.png"
 ![RF transceiver Schematics](/images/drone/RF.png)
 
 ![GPS & Magnetometer Schematics](/images/drone/GPS+Magnetometer_schematics.png)
-![4-layer GPS & Magnetometer Module PCB](/images/drone/GPS+Magnetometer.png)
+![](/images/drone/GPS+Magnetometer_Editor.png)
  
 
+<figure class="side-by-side">
+  <img src="/images/drone/GPS+Magnetometer_back.png" alt="">
+  <img src="/images/drone/GPS+Magnetometer_front.png" alt="">
+  <figcaption>4-layer GPS & Magnetometer Module PCB</figcaption>
+</figure>
