@@ -43,13 +43,19 @@ const others = allProjects.filter(p => !p.data.featured);
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="role">Quantum Photonic Researcher Co-op</span>
+            <span class="role">Firmware & Validation Engineer Co-op</span>
             <span class="company">— UBC Quantum Matter Institute</span>
           </div>
           <span class="period">May 2026 - Present</span>
-          <p class="desc"> Testing and verifying the low-noise quasi-current source PCB for the SNSPD biasing current, which can I-V sweep to detect the switching current for each wireguided photonics chip</p>
-          <p class="desc"> Desiging a current source PCB casing on SolidWorks, reducing vibrational noise coupling into the PCB</p>
-          <p class="desc"> Working on the quasi-current source PCB firmware in C++</p>
+          <ul class="desc-list">
+            <li>Developing full-stack embedded firmware for the 4-channel low-noise SNSPD biasing quasi-current source in <span style="white-space: nowrap">C++</span> which achieves lower noise spectral density than commercial SMU</li>
+            <li>Implementing 24-bit sigma-delta ADC and 16-bit DAC SPI driver on ESP32 using ESP-IDF, enabling precision current measurement and control</li>
+            <li>Designing FSM with FreeRTOS dual-core task architecture, ISR-driven sampling, and inter-core queue communication</li>
+            <li>Developing automated V-I sweep measurement to characterize the switching current of the superconducting nanowire, which is used for finding steady biasing current for SNSPD</li>
+            <li>Building Python Qt6 GUI and CSV data logging for instrument and data acquisition</li>
+            <li>Testing and verifying the noise floor, negative rail voltage noise, time domain voltage drift characteristics, and DAC &amp; ADC accuracy of the instrument using oscilloscope and pico-ammeter</li>
+            <li>Designing a current source PCB casing on SolidWorks, reducing vibrational noise coupling into the PCB</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -217,6 +223,17 @@ const others = allProjects.filter(p => !p.data.featured);
     color: var(--text-muted);
     line-height: 1.6;
     margin-top: 0.15rem;
+  }
+
+  .desc-list {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-top: 0.35rem;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
   .grid {
