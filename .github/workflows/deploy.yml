@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Fetch resume PDF
-        run: curl -fL "https://github.com/Taichi-Kamei/Resume/raw/main/Taichi_Kamei_Resume.pdf" -o public/PDF/Taichi_Kamei_Resume.pdf
+        run: mkdir -p public/PDF && curl -fL "https://github.com/Taichi-Kamei/Resume/raw/main/Taichi_Kamei_Resume.pdf" -o public/PDF/Taichi_Kamei_Resume.pdf
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
