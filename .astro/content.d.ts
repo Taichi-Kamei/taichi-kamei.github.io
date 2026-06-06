@@ -128,6 +128,14 @@ declare module 'astro:content' {
   rendered?: RenderedContent;
   filePath?: string;
 }>;
+"work": Record<string, {
+  id: string;
+  body?: string;
+  collection: "work";
+  data: InferEntrySchema<"work">;
+  rendered?: RenderedContent;
+  filePath?: string;
+}>;
 
 	};
 

@@ -1,10 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 
 const allProjects = await getCollection('projects');
+const allWork = await getCollection('work');
+const sortedWork = allWork.sort((a, b) => a.data.priority - b.data.priority);
+const renderedWork = await Promise.all(sortedWork.map(async (w) => ({ ...w, rendered: await render(w) })));
 const featured = allProjects
   .filter(p => p.data.featured)
   .sort((a, b) => a.data.priority - b.data.priority);
@@ -41,22 +44,18 @@ const others = allProjects.filter(p => !p.data.featured);
     <section class="section">
       <h2 class="section-title">Work Experience</h2>
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="role">Firmware & Validation Engineer Co-op</span>
-            <span class="company">— UBC Quantum Matter Institute</span>
+        {renderedWork.map(({ data, rendered: { Content } }) => (
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <span class="role">{data.role}</span>
+              <span class="company">— {data.company}</span>
+            </div>
+            <span class="period">{data.period}</span>
+            <div class="desc-list work-md">
+              <Content />
+            </div>
           </div>
-          <span class="period">May 2026 - Present</span>
-          <ul class="desc-list">
-            <li>Developing full-stack embedded firmware for the 4-channel low-noise SNSPD biasing quasi-current source in <span style="white-space: nowrap">C++</span> which achieves lower noise spectral density than commercial SMU</li>
-            <li>Implementing 24-bit sigma-delta ADC and 16-bit DAC SPI driver on ESP32 using ESP-IDF, enabling precision current measurement and control</li>
-            <li>Designing FSM with FreeRTOS dual-core task architecture, ISR-driven sampling, and inter-core queue communication</li>
-            <li>Developing automated V-I sweep measurement to characterize the switching current of the superconducting nanowire, which is used for finding steady biasing current for SNSPD</li>
-            <li>Building Python Qt6 GUI and CSV data logging for instrument and data acquisition</li>
-            <li>Testing and verifying the noise floor, negative rail voltage noise, time domain voltage drift characteristics, and DAC &amp; ADC accuracy of the instrument using oscilloscope and pico-ammeter</li>
-            <li>Designing a current source PCB casing on SolidWorks, reducing vibrational noise coupling into the PCB</li>
-          </ul>
-        </div>
+        ))}
       </div>
     </section>
 
@@ -234,6 +233,19 @@ const others = allProjects.filter(p => !p.data.featured);
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+  }
+
+  .work-md :global(ul) {
+    list-style: disc;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
+  }
+
+  .work-md :global(p) {
+    margin: 0;
   }
 
   .grid {
