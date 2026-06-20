@@ -30,6 +30,7 @@ coverImage: "/images/drone/GPS+Magnetometer.png"
 ![Sensors Schematics](/images/drone/Sensors.png)
 ![RF transceiver Schematics](/images/drone/RF.png)
 
+![Flight Controller Layout (Still working on RF)](/images/drone/fc_proto.png)
 ![GPS & Magnetometer Schematics](/images/drone/GPS+Magnetometer_schematics.png)
 ![](/images/drone/GPS+Magnetometer_Editor.png)
  
